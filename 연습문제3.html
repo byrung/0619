@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('body').click(function() {
+                $('.drawer-menu').slideToggle();
+                $('.drawer').toggleClass('red-background');
+            });
+        });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        .drawer {
+            position: fixed;
+            width: 100%;
+            text-align: center;
+            color: white;
+            background-color: red;
+            transition: background-color 0.3s ease;
+        }
+
+        .drawer.red-background {
+            background-color: red;
+        }
+
+        .drawer h1 {
+            height: 50px;
+        }
+
+        .drawer-menu {
+            display: none;
+            padding: 10px;
+            background-color: #f00;
+        }
+
+        .content {
+            padding: 10px;
+            padding-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="drawer">
+        <h1>로고</h1>
+        <div class="drawer-menu">
+            <p>Exxe pariatur</p>
+            <p>Lorem ipsum dolor sit amet</p>
+            <p>Consectetur adipiscing elit</p>
+        </div>
+    </div>
+    <div class="content">
+        <h1>Lorem ipsum</h1>
+        <p>Magna et excepteur minim</p>
+        <p>qui do proident consequat</p>
+        <p>Aliquip ew qui ea ut</p>
+        <p>Duis fugiat adipisicing</p>
+    </div>
+</body>
+</html>
